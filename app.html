@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no,width=device-width" />
+    <link href="super-mario-bros.css" rel="stylesheet" type="text/css" />
+    <title>Super Mario Bros</title>
+  </head>
+
+  <body>
+    <canvas></canvas>
+
+    <script type="text/javascript">
+      const gameFiles = [
+        'game/controller.js',
+        'game/display.js',
+        'game/engine.js',
+        'game/game.js',
+        'game/main.js',
+      ];
+
+      gameFiles.forEach((file) => {
+        const script = document.createElement('script');
+        script.setAttribute('type', 'text/javascript');
+        script.setAttribute('src', file);
+        document.head.appendChild(script);
+      });
+    </script>
+  </body>
+</html>
